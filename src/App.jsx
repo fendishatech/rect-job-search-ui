@@ -1,10 +1,19 @@
+import Footer from "./components/footer/Footer";
+import Jobs from "./components/jobs/Jobs";
+import Navbar from "./components/navbar/Navbar";
+import Search from "./components/search/Search";
+import Values from "./components/values/Values";
 import "./styles/index.css";
 
 function App() {
   return (
-    <>
-      <h1 className="text-indigo-400">Hello App</h1>
-    </>
+    <div>
+      <Navbar />
+      <Search />
+      <Jobs />
+      <Values />
+      <Footer />
+    </div>
   );
 }
 
