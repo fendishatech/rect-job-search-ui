@@ -7,7 +7,7 @@ import "./styles/index.css";
 
 function App() {
   return (
-    <div>
+    <div className="w-[95%] m-auto bg-white">
       <Navbar />
       <Search />
       <Jobs />
