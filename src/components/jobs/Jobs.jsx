@@ -1,30 +1,40 @@
 import { BiTimeFive } from "react-icons/bi";
 
+const jobsList = [
+  {
+    id: 1,
+    title: "Web Developer",
+    time: "1hr",
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat odit",
+    company: "Meta",
+    location: "Addis Ababa",
+  },
+];
+
 const Jobs = () => {
   return (
     <div className="">
       <div className="flex gap-10 justify-center flex-wrap items-center py-10">
-        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+        {jobsList.map((job) => (
           <div
-            key={item}
+            key={job.id}
             className="group group/item w-[250px] p-[20px] bg-white rounded-[10px] hover:bg-blueColor shadow-lg shadow-grayIsh-400/700 hover:shadow-lg"
           >
             {/* Header */}
             <span className="flex items-center gap-4">
               <h1 className="text-[16px] font-semibold text-textColor group-hover:text-white">
-                Web Developer
+                {job.title}
               </h1>
               <span className="flex items-center text-[#ccc] gap-1">
                 <BiTimeFive />
-                Now
+                {job.time}
               </span>
             </span>
             {/*  */}
-            <h6 className="text-[#ccc]">Canada</h6>
+            <h6 className="text-[#ccc]">{job.location}</h6>
             {/* desc */}
             <p className="text-[13px] text-[#959595] pt-[20px] border-t-[2px] mt-[20px] group-hover:text-white">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-              odit.
+              {job.desc}
             </p>
             {/* company */}
             <div className="flex items-center gap-2">
@@ -63,7 +73,7 @@ const Jobs = () => {
                 </g>
               </svg>
               <span className="text-[14px] py-[1rem] block group-hover:text-white">
-                Meta
+                {job.company}
               </span>
             </div>
             {/* Apply Button */}
